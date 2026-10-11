@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic Tac Toe AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Tic Tac Toe</h1>
+
+    <section class="controls">
+      <label>Mode
+        <select id="mode">
+          <option value="ai">Play vs AI</option>
+          <option value="human">Two Players</option>
+        </select>
+      </label>
+      <label id="strategyBox">AI strategy
+        <select id="strategy">
+          <option value="minimax">Minimax (fixed, no training)</option>
+          <option value="reinforcement">Reinforcement learning</option>
+        </select>
+      </label>
+      <label id="sideBox">You play as
+        <select id="side">
+          <option value="X">X (go first)</option>
+          <option value="O">O (AI goes first)</option>
+        </select>
+      </label>
+    </section>
+
+    <p id="status" class="status" aria-live="polite">Loading...</p>
+    <p id="aiInfo" class="info" aria-live="polite"></p>
+
+    <section id="board" class="board" aria-label="Game board"></section>
+
+    <section class="scores">
+      <div>X <strong id="scoreX">0</strong></div>
+      <div>Draw <strong id="scoreD">0</strong></div>
+      <div>O <strong id="scoreO">0</strong></div>
+    </section>
+
+    <div class="buttons">
+      <button id="newGame">New Round</button>
+      <button id="resetScore" class="ghost">Reset Score</button>
+    </div>
+  </main>
+
+  <script src="js/ai.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
